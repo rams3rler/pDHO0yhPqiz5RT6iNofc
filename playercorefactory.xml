@@ -1,0 +1,18 @@
+<playercorefactory>
+        <players>
+                <player name="BubbleUPnP" type="ExternalPlayer" audio="false" video="true">
+                <filename>com.bubblesoft.android.bubbleupnp</filename>
+                <hidexbmc>true</hidexbmc>
+                <playcountminimumtime>120</playcountminimumtime>
+                </player>
+        </players>
+        <rules action="prepend">
+                <rule protocols="smb" player="dvdplayer"/>
+                <rule dvdimage="true" player="dvdplayer"/>
+                <rule protocols="rtmp" player="dvdplayer"/>
+                <rule protocols="rtsp" player="dvdplayer" />
+                <rule protocols="sop" player="dvdplayer" />
+                <rule internetstream="true" player="BubbleUPnP" />
+                <rule video="true" player="BubbleUPnP"/> <!-- Default for anything else not listed -->
+        </rules>
+</playercorefactory>
